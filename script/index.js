@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
 	var aLiOneDimension = document.getElementById('omiddle-ul').getElementsByTagName('li');
 
 	for (var i = 0; i < aLiOneDimension.length; i++) {
@@ -125,8 +125,8 @@ window.onload = function() {
 	//2/4频率调整框出现动画
 	oMenu.onclick = function () {
 		if (turn == true) {
-			chainSport(oDiy, 'width', 220, function () {
-				chainSport(oDiy, 'height', 160);
+			chainMove(oDiy, 'width', 220, function () {
+				chainMove(oDiy, 'height', 160);
 			});
 
 			turn = false;
@@ -505,7 +505,7 @@ window.onload = function() {
 
 						//游戏结束，弹出结束窗口,输出玩家所得的分数
 						oGameoverScore.innerText = score;
-						elasticAndRubSport(oGameover, 150)
+						elasticRubMove(oGameover, 150)
 					}
 				}
 

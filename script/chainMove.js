@@ -1,50 +1,41 @@
 function getStyle(obj, attr) {
-    if (obj.currentStyle) 
-    {
+    if (obj.currentStyle) {
         return obj.currentStyle[attr];
     }
-    else
-    {
+    else {
         return getComputedStyle(obj, false)[attr];
     }
 }
-function chainSport(obj, attr, iTarget, fn) {
+function chainMove(obj, attr, iTarget, fn) {
     clearInterval(obj.timer);
 
     obj.timer = setInterval(function () {
         var iCur = 0;
 
-        if (attr == 'opacity') 
-        {
+        if (attr == 'opacity') {
             iCur = parseInt(parseFloat(getStyle(obj, attr)) * 100);
         }
-        else 
-        {
+        else {
             iCur = parseInt(getStyle(obj, attr));
         }
 
         var iSpeed = (iTarget - iCur) / 8;
         iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
 
-        if (iCur == iTarget)
-        {
+        if (iCur == iTarget) {
             clearInterval(obj.timer);
 
-            if(fn) 
-            {
+            if (fn) {
                 fn();
             }
         }
-        else 
-        {
-            if (attr == 'opacity')
-            {
+        else {
+            if (attr == 'opacity') {
                 iCur += iSpeed;
                 obj.style.filter = "alpha(opacity: " + iCur + ")";
                 obj.style.opacity = iCur / 100;
             }
-            else 
-            {
+            else {
                 obj.style[attr] = iCur + iSpeed + 'px';
             }
         }
