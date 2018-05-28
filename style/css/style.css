@@ -1,0 +1,187 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{  
+	background-color: #dee;
+	font-size: 20px;
+	font-weight: 600;
+}
+#gameover{
+	width: 300px;
+	height: 250px;
+	text-align: center;
+	background-color: #A9A9A9;
+	border-radius: 20px;
+	position: absolute;
+	top: -250px;
+	left: 0;
+	z-index: 2000;
+	font-size: 30px;
+}
+#gameover p{
+	font-size: 40px;
+	color: red;
+	margin-top: 20px;
+}
+#gameover span{
+	color: red;
+}
+.gameover-score{
+	margin: 30px auto;
+	font-size: 20px;
+}
+.gameover-restart{
+	width: 170px;
+	height: 45px;
+	border: 3px solid #FFDEAD;
+	border-radius: 10px;
+	font-size: 30px;
+	margin: auto 65px 20px auto;
+	cursor: pointer;
+}
+.wrap{
+	display: block;
+	/*display: none;*/
+}
+
+#left{
+	width: 200px;
+	height: 450px;
+	position: absolute;
+	top: 50px;
+	left: 200px;
+}
+#left img{
+	width: 202px;
+	height: 56px;
+}
+#left p{
+	margin: 105px 0;
+}
+
+#middle{
+	width: 450px;
+	height: 450px;
+	border-radius: 20px;
+	margin: 50px auto 0;
+	position: relative;
+}
+.middle-ul{
+	width: 450px;
+	height: 450px;
+	border-radius: 20px;
+	font-size: 30px;
+	font-weight: 600;
+	color: #111;
+}
+.middle-ul li{
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	margin: 10px auto auto 10px;
+	text-align: center;
+	border-radius: 20px;
+	float: left;
+	background-color: #000;
+
+	opacity: 0.1;
+	filter: alpha(opacity = 10);
+}
+.back{
+	height: 450px;
+	text-align: center;
+	margin-top: -450px;
+}
+.board{
+	width: 450px; 
+	height: 450px;
+	border-radius: 20px;
+}
+#right{
+	width: 60px;
+	height: 450px;
+	position: absolute;
+	top: 50px;
+	right: 340px;
+}
+#right img{
+	width: 60px;
+	height: 60px;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+#diy{
+	width: 0;
+	height: 0;
+	text-align: center;
+	border-radius: 20px;
+	background-color: #DCDCDC;
+	padding-top: 20px;
+
+	position: absolute;
+	z-index: 2000;
+	overflow: hidden;
+}
+#diy p{
+	font-size: 20px;
+	cursor: default;
+}
+#diy span{
+	font-size: 15px;
+	cursor: default;
+}
+
+
+/*------------------滑动条样式---------------------*/
+/*去除默认样式*/
+input[type=range]{
+    -webkit-appearance: none;
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+}
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+}    
+/*给滑动轨道添加样式*/
+input[type=range]::-webkit-slider-runnable-track{
+    height: 15px;
+    border-radius: 10px; /*将轨道设为圆角的*/
+	box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+
+}
+input[type=range]:focus {
+    outline: none;
+}
+/*给滑块添加样式*/
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+    background: #fff; 
+    border-radius: 50%; /*外观设置为圆形*/
+    border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+	box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+	cursor: pointer;
+}
+
+/*滑动条对应的数字样式*/
+#onumber{
+	width: 25px;
+	height: 25px;
+	border: 0;
+	background-color: #DCDCDC;
+	margin-top: 20px;
+	outline: 0;
+	text-align: center;
+	font-weight: 600;
+}

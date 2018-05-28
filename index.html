@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="images/my2048logo.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="style/css/style.css">
+	<script src="js/index.js"></script>
+	<script src="js/elasticAndRubSport.js"></script>
+	<script src="js/chainSport.js"></script>
+	<title>2048</title>
+</head>
+<body>
+	<div id="gameover">
+		<p>Game Over</p>
+		<div class="gameover-score">Your Score : <span id="ogameover-score"></span></div>
+		<div class="gameover-restart" id="ogameover-restart">Try again</div>
+	</div>
+	<div class="wrap" id="owrap">
+		<div id="left">
+			<img src="images/2048logo2.png" alt="">
+			<p>Best Score：
+				<span id="maxscore"></span>
+			</p>
+			<p>Score：
+				<span id="currentscore"></span>
+			</p>
+			<p>Step：
+				<span id="currentstep"></span>
+			</p>
+		</div>
+
+		<div id="middle">
+			<ul class="middle-ul" id="omiddle-ul">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<div class="back">
+			<img src="images/board.png" alt="board" class="board">
+		</div>
+
+		<div id="right">
+			BGM:<img src="images/music.png" alt="music" id="omusicimg">
+			Restart:<img src="images/restart.png" alt="restart" id="orestartimg">
+			Recall:<img src="images/recall.png" alt="recall" id="orecallimg">
+			Setting:<img src="images/menu.png" alt="menu" id="omenu">
+		</div>
+
+		<div id="diy">
+			<p>Please choose the frequency of 2 / 4 :</p>
+			<input type="range" step="1" min="1" max="100" id="orange" value="80">
+			<span>The frequency of 2 :</span><input type="text" id="onumber" value="80"><span>%</span>
+		</div>
+	</div>
+
+	<audio autoplay="autoplay" loop="loop" height="10" width="10" id="oaudio">
+		<source src="music/Summer.m4a" type="audio/mp3" />
+		<source src="music/Summer.m4a" type="audio/ogg" />
+		<embed height="10" width="10" src="music/Summer.m4a" />
+	</audio>
+</body>
+</html>
